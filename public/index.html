@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khobor AI – আজকের সবচেয়ে আলোচিত খবর</title>
+<meta name="description" content="এআই-চালিত স্বয়ংক্রিয় নিউজ পোর্টাল: বাংলাদেশ ও বিশ্বের ট্রেন্ডিং খবর, মিনিটে মিনিটে আপডেট।">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F3F5;--surface:#fff;--ink:#101B26;--mute:#5B6B7A;--line:#D9DFE5;--live:#D9232D;--deep:#17324D;--tint:#E6EDF4;
+--serif:'Noto Serif Bengali','Hind Siliguri',serif;--sans:'Hind Siliguri',system-ui,sans-serif;color-scheme:light}
+:root[data-theme=dark]{--bg:#0E151C;--surface:#16202A;--ink:#EAF0F5;--mute:#93A3B2;--line:#26333F;--live:#FF5560;--deep:#8FB8E0;--tint:#1B2A38;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0E151C;--surface:#16202A;--ink:#EAF0F5;--mute:#93A3B2;--line:#26333F;--live:#FF5560;--deep:#8FB8E0;--tint:#1B2A38;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+body{font:17px/1.7 var(--sans);background:var(--bg);color:var(--ink);padding-top:env(safe-area-inset-top)}
+a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--live);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.bar{background:var(--deep);color:#fff;font-size:14px}
+:root[data-theme=dark] .bar{background:var(--tint);color:var(--ink)}
+.bar .wrap{display:flex;gap:14px;align-items:center;height:40px;overflow:hidden}
+.live{background:var(--live);color:#fff;padding:1px 10px;border-radius:3px;font-weight:600;flex:none}
+.tick{white-space:nowrap;overflow:hidden;flex:1}.tick span{display:inline-block;padding-left:100%;animation:tk 60s linear infinite}
+@keyframes tk{to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.tick span{animation:none;padding:0}}
+header.m{background:var(--surface);border-bottom:1px solid var(--line)}
+.m .top{display:flex;justify-content:space-between;align-items:center;padding:18px 0 10px;gap:12px}
+.logo{font:800 34px/1 var(--serif);letter-spacing:-.5px}.logo i{font-style:normal;color:var(--live)}
+.tools{display:flex;gap:8px}
+.tools input{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:20px;padding:6px 14px;font:inherit;font-size:15px;width:190px}
+.tools button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:20px;padding:6px 12px;cursor:pointer;font:inherit}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}
+nav a{padding:6px 14px;border-radius:20px;font-weight:500;white-space:nowrap;color:var(--mute)}
+nav a.on,nav a:hover{background:var(--ink);color:var(--bg)}
+main{padding:26px 0 60px;min-height:70vh}
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;margin-bottom:34px}
+.lead{position:relative;border-radius:10px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:var(--deep)}
+.lead img,.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lead:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(5,12,20,.92))}
+.lead .t{position:relative;z-index:1;padding:26px}
+.lead h2{font:800 clamp(26px,3.4vw,40px)/1.3 var(--serif);margin:8px 0}
+.chip{display:inline-block;background:var(--live);color:#fff;font-size:13px;font-weight:600;padding:0 10px;border-radius:3px}
+.hot{background:var(--surface);border-radius:10px;padding:8px 20px;border:1px solid var(--line)}
+.hot h3{font:800 20px var(--serif);padding:12px 0 6px}
+.hot a{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line);line-height:1.5;font-weight:500}
+.hot b{font:800 26px/1 var(--serif);color:var(--live)}
+.sec{font:800 24px var(--serif);margin:0 0 16px;display:flex;align-items:center;gap:12px}.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.card{background:var(--surface);border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .15s}
+.card:hover{border-color:var(--deep)}
+.card .im{aspect-ratio:16/9;position:relative;background:var(--tint)}
+.card .b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font:600 19px/1.5 var(--serif)}
+.meta{font-size:14px;color:var(--mute)}
+.cat{color:var(--live);font-weight:600;font-size:14px}
+.ph{display:grid;place-items:center;font:800 64px var(--serif);color:rgba(255,255,255,.85)}
+.more{display:block;margin:30px auto 0;padding:10px 28px;border-radius:24px;border:1px solid var(--ink);background:none;color:var(--ink);font:inherit;cursor:pointer}
+article.full{max-width:760px;margin:0 auto}
+article.full h1{font:800 clamp(28px,4vw,42px)/1.35 var(--serif);margin:10px 0 14px}
+article.full .sum{font-size:20px;color:var(--mute);border-left:4px solid var(--live);padding-left:14px;margin:16px 0}
+article.full img{width:100%;border-radius:10px;margin:14px 0}
+article.full .body p{margin:0 0 1.1em;font-size:19px;line-height:1.95}
+.src{background:var(--tint);padding:14px 18px;border-radius:8px;margin:26px 0;font-size:15px}
+.tags a{display:inline-block;border:1px solid var(--line);border-radius:16px;padding:0 12px;margin:0 6px 6px 0;font-size:14px;color:var(--mute)}
+.empty{text-align:center;padding:70px 20px;color:var(--mute)}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-size:14px;text-align:center}
+/* admin */
+.adm table{width:100%;border-collapse:collapse;background:var(--surface);font-size:15px}
+.adm td,.adm th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.adm button,.adm input{font:inherit;padding:5px 12px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.adm .pri{background:var(--ink);color:var(--bg)}
+.log{background:#0a1118;color:#9fe3b0;font:13px/1.6 monospace;padding:12px;border-radius:8px;max-height:200px;overflow:auto;margin:14px 0}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.lead{min-height:340px}.tools input{width:120px}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><span class="live">লাইভ</span><div class="tick"><span id="tick">খবর লোড হচ্ছে…</span></div></div></div>
+<header class="m"><div class="wrap">
+  <div class="top"><a class="logo" href="#/">খবর<i>.</i>AI</a>
+  <div class="tools"><input id="q" type="search" placeholder="খবর খুঁজুন" aria-label="খুঁজুন"><button id="th" aria-label="থিম পরিবর্তন">◐</button></div></div>
+  <nav id="nav"></nav>
+</div></header>
+<main><div class="wrap" id="app"></div></main>
+<footer><div class="wrap">এই পোর্টালের খবর এআই দ্বারা সংকলিত ও পুনর্লিখিত; প্রতিটি খবরে মূল সূত্রের লিংক দেওয়া আছে। · <a href="/rss.xml">RSS</a> · <a href="#/admin">অ্যাডমিন</a></div></footer>
+
+<script>
+const $=s=>document.querySelector(s), app=$('#app');
+const E=s=>(s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+const ago=d=>{const m=(Date.now()-new Date(d))/6e4;return m<2?'এইমাত্র':m<60?bn(Math.floor(m))+' মিনিট আগে':m<1440?bn(Math.floor(m/60))+' ঘণ্টা আগে':bn(Math.floor(m/1440))+' দিন আগে'};
+const hues={};const hue=c=>hues[c]??=[...c].reduce((a,x)=>a+x.charCodeAt(0),0)%360;
+const api=async(u,o)=>{const r=await fetch(u,o);if(!r.ok)throw new Error(r.status);return r.json()};
+const img=a=>a.image?`<img src="${E(a.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${E(a.category||'খ')[0]}',style:'background:hsl(${hue(a.category||'')} 45% 28%)'}))">`
+  :`<div class="ph" style="background:hsl(${hue(a.category||'')} 45% 28%)">${E(a.category||'খ')[0]}</div>`;
+const card=a=>`<a class="card" href="#/news/${a.slug}"><div class="im">${img(a)}</div><div class="b"><span class="cat">${E(a.category)}</span><h3>${E(a.title)}</h3><p class="meta">${E(a.summary).slice(0,110)}…</p><span class="meta">${ago(a.createdAt)}</span></div></a>`;
+const clean=h=>{const d=new DOMParser().parseFromString(h||'','text/html');d.querySelectorAll('*:not(p,strong,em,ul,ol,li,h3,br,blockquote,body,html,head)').forEach(n=>n.replaceWith(...n.childNodes));return d.body.innerHTML};
+
+let cfg={categories:[]},page=1,state={};
+async function init(){
+  cfg=await api('/api/config');
+  $('#nav').innerHTML=`<a href="#/" data-c="">সর্বশেষ</a>`+cfg.categories.map(c=>`<a href="#/cat/${encodeURIComponent(c)}" data-c="${c}">${c}</a>`).join('');
+  try{const t=await api('/api/trending');$('#tick').textContent=t.map(a=>a.title).join('   ●   ')||'শীঘ্রই খবর আসছে…'}catch{}
+  route();
+}
+async function route(){
+  const h=decodeURIComponent(location.hash.slice(2)),[p,...r]=h.split('/'),arg=r.join('/');
+  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.c===(p==='cat'?arg:p===''?'':'x')));
+  scrollTo(0,0);
+  if(p==='news')return article(arg);
+  if(p==='admin')return admin();
+  if(p==='search')return list(`"${arg}" এর ফলাফল`,`q=${encodeURIComponent(arg)}`);
+  if(p==='tag')return list(`#${arg}`,`tag=${encodeURIComponent(arg)}`);
+  if(p==='cat')return list(arg,`category=${encodeURIComponent(arg)}`);
+  home();
+}
+async function home(){
+  const [tr,all]=await Promise.all([api('/api/trending'),api('/api/articles?limit=13')]);
+  if(!all.items.length)return app.innerHTML=`<div class="empty"><h2>প্রথম খবর তৈরি হচ্ছে…</h2><p>সার্ভার এখন সোর্স থেকে খবর সংগ্রহ করছে। ১-২ মিনিট পর রিফ্রেশ করুন।</p></div>`;
+  const lead=tr[0]||all.items[0], side=(tr.length>1?tr.slice(1,6):all.items.slice(1,6));
+  app.innerHTML=`<section class="hero"><a class="lead" href="#/news/${lead.slug}">${img(lead)}<div class="t"><span class="chip">${E(lead.category)}</span><h2>${E(lead.title)}</h2><p>${E(lead.summary)}</p></div></a>
+  <aside class="hot"><h3>এখন আলোচিত</h3>${side.map((a,i)=>`<a href="#/news/${a.slug}"><b>${bn(i+1)}</b><span>${E(a.title)}<br><small class="meta">${ago(a.createdAt)}</small></span></a>`).join('')}</aside></section>
+  <h2 class="sec">সর্বশেষ</h2><div class="grid" id="g">${all.items.filter(a=>a.id!==lead.id).map(card).join('')}</div>`;
+}
+async function list(title,qs){
+  page=1;state={qs};
+  const d=await api(`/api/articles?${qs}&limit=12&page=1`);
+  app.innerHTML=`<h2 class="sec">${E(title)}</h2>`+(d.items.length?`<div class="grid" id="g">${d.items.map(card).join('')}</div>${d.total>12?'<button class="more" id="mb">আরও দেখুন</button>':''}`:`<div class="empty">এই বিভাগে এখনো কোনো খবর নেই।</div>`);
+  $('#mb')?.addEventListener('click',async e=>{page++;const n=await api(`/api/articles?${state.qs}&limit=12&page=${page}`);$('#g').insertAdjacentHTML('beforeend',n.items.map(card).join(''));if(page*12>=n.total)e.target.remove()});
+}
+async function article(slug){
+  try{const a=await api('/api/articles/'+slug);document.title=a.title+' – খবর.AI';
+  app.innerHTML=`<article class="full"><span class="cat">${E(a.category)}</span><h1>${E(a.title)}</h1><p class="meta">${ago(a.createdAt)} · ${bn(a.views)} বার পঠিত</p>${a.image?`<img src="${E(a.image)}" alt="" referrerpolicy="no-referrer" onerror="this.remove()">`:''}
+  <p class="sum">${E(a.summary)}</p><div class="body">${clean(a.body)}</div>
+  <div class="src">মূল সূত্র: <a href="${E(a.sourceUrl)}" target="_blank" rel="noopener nofollow"><b>${E(a.source)}</b></a> — সম্পূর্ণ প্রতিবেদন পড়তে সূত্রে যান। এই লেখাটি এআই সহায়তায় প্রস্তুত।</div>
+  <div class="tags">${a.tags.map(t=>`<a href="#/tag/${encodeURIComponent(t)}">#${E(t)}</a>`).join('')}</div>
+  ${a.related.length?`<h2 class="sec" style="margin-top:34px">আরও পড়ুন</h2><div class="grid">${a.related.map(card).join('')}</div>`:''}</article>`}
+  catch{app.innerHTML='<div class="empty">খবরটি পাওয়া যায়নি।</div>'}
+}
+function admin(){
+  let key=sessionStorage.k||'';
+  const draw=async()=>{
+    if(!key)return app.innerHTML=`<div class="adm"><h2 class="sec">অ্যাডমিন</h2><input id="k" type="password" placeholder="ADMIN_KEY"> <button class="pri" id="go">প্রবেশ</button></div>`,
+      $('#go').onclick=()=>{key=$('#k').value;sessionStorage.k=key;draw()};
+    try{const d=await api('/api/admin/all',{headers:{'x-admin-key':key}});
+    app.innerHTML=`<div class="adm"><h2 class="sec">অ্যাডমিন প্যানেল</h2>
+    <p>মোট ${bn(d.items.length)} · পাবলিশড ${bn(d.items.filter(a=>a.published).length)} · ${d.status.running?'⏳ সংগ্রহ চলছে…':'নিষ্ক্রিয়'}</p>
+    <p style="margin:10px 0"><button class="pri" id="run">এখনই নতুন খবর সংগ্রহ করুন</button> <button id="rf">রিফ্রেশ</button></p>
+    <details style="margin:8px 0"><summary>AI pool status (${d.status.pool.filter(x=>x.state==='ready').length}/${d.status.pool.length} ready)</summary><table>${d.status.pool.map(x=>`<tr><td>${E(x.label)}</td><td>${E(x.state)}</td><td>✓${x.ok} ✗${x.fail}</td><td>${E(x.lastError)}</td></tr>`).join('')}</table></details>
+    <div class="log">${d.status.log.map(E).join('<br>')||'লগ খালি'}</div>
+    <div style="overflow-x:auto"><table><tr><th>শিরোনাম</th><th>বিভাগ</th><th>সূত্র</th><th>ট্রেন্ড</th><th></th></tr>
+    ${d.items.map(a=>`<tr><td><a href="#/news/${a.slug}">${E(a.title)}</a></td><td>${E(a.category)}</td><td>${E(a.source)}</td><td>${a.trend}</td>
+    <td><button data-t="${a.id}" data-p="${a.published}">${a.published?'আনপাবলিশ':'পাবলিশ'}</button> <button data-d="${a.id}">ডিলিট</button></td></tr>`).join('')}</table></div></div>`;
+    const H={'x-admin-key':key,'Content-Type':'application/json'};
+    $('#run').onclick=async()=>{await api('/api/admin/run',{method:'POST',headers:H});setTimeout(draw,2000)};$('#rf').onclick=draw;
+    app.querySelectorAll('[data-t]').forEach(b=>b.onclick=async()=>{await api('/api/admin/'+b.dataset.t,{method:'PATCH',headers:H,body:JSON.stringify({published:b.dataset.p!=='true'})});draw()});
+    app.querySelectorAll('[data-d]').forEach(b=>b.onclick=async()=>{if(confirm('ডিলিট করবেন?')){await api('/api/admin/'+b.dataset.d,{method:'DELETE',headers:H});draw()}});
+    }catch{sessionStorage.k='';key='';draw()}
+  };draw();
+}
+$('#q').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.value.trim())location.hash='#/search/'+encodeURIComponent(e.target.value.trim())});
+$('#th').onclick=()=>{const r=document.documentElement,d=(r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))==='dark';r.dataset.theme=d?'light':'dark';localStorage.th=r.dataset.theme};
+if(localStorage.th)document.documentElement.dataset.theme=localStorage.th;
+addEventListener('hashchange',route);init();
+setInterval(()=>{if(!location.hash||location.hash==='#/')home()},5*60*1000);
+</script>
+</body>
+</html>

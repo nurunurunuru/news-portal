@@ -1,0 +1,16 @@
+{
+  "name": "ai-news-portal",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Auto news portal: collects trending news, rewrites with Gemini, auto-publishes",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "engines": { "node": ">=20.6" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "rss-parser": "^3.13.0"
+  }
+}
