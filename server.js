@@ -1,3 +1,4 @@
+import './env.js';
 import express from 'express';
 import cron from 'node-cron';
 import * as store from './store.js';
